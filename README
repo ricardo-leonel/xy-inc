@@ -1,0 +1,38 @@
+Passo para executar.
+
+
+1 - Criar O bando de dados mysql.
+
+
+create DATABASE ZUP;
+
+use ZUP;
+
+create table PONTO (
+  ID        INTEGER AUTO_INCREMENT,
+  DESCRICAO VARCHAR(255),
+  EIXO_X    INT,
+  EIXO_Y    INT,
+  PRIMARY KEY (ID)
+);
+
+INSERT INTO ZUP.PONTO(DESCRICAO,EIXO_X,EIXO_Y) VALUES ('LANCHONETE',27,12);
+INSERT INTO ZUP.PONTO(DESCRICAO,EIXO_X,EIXO_Y) VALUES ('POSTO',31,18);
+INSERT INTO ZUP.PONTO(DESCRICAO,EIXO_X,EIXO_Y) VALUES ('JOALHERIA',15,12);
+INSERT INTO ZUP.PONTO(DESCRICAO,EIXO_X,EIXO_Y) VALUES ('FLORICULTURA',19,21);
+INSERT INTO ZUP.PONTO(DESCRICAO,EIXO_X,EIXO_Y) VALUES ('PUB',12,8);
+INSERT INTO ZUP.PONTO(DESCRICAO,EIXO_X,EIXO_Y) VALUES ('SUPERMERCADO',23,6);
+INSERT INTO ZUP.PONTO(DESCRICAO,EIXO_X,EIXO_Y) VALUES ('CHURRASCARIA',28,2);
+
+
+
+2 - Compilar o projeto com o maven: mvn clean install
+
+3 - Testar as funcionalidades com as seguintes urls:
+
+	3.1 - listar - http://localhost:8080/xy-inc/list
+	3.2 - criar - http://localhost:8080/xy-inc/create/30/10/Escola
+	3.3 - calcular a distancia e trazes os POIs - http://localhost:8080/xy-inc/calcular/20/10/10
+
+
+
